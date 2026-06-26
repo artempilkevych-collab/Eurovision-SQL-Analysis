@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project explores historical Eurovision Song Contest data using SQL queries.
+Analysis of 60+ years of Eurovision Song Contest (1957–2022) using SQL in Google BigQuery. The dataset contains 1,359 records across 51 countries. The project covers performance trends, decade-by-decade comparisons, and year-over-year analysis using window functions.
 
 ## Dataset
 
