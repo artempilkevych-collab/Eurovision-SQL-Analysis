@@ -61,7 +61,7 @@ SELECT
     RANK() OVER(PARTITION BY decade ORDER BY total_points DESC) AS ranking
 FROM decade_points
 ORDER BY decade, ranking;
-----9. Which years had the largest number of participating countries?
+---9. Which years had the largest number of participating countries?
 SELECT year, COUNT(country) AS country_count
 FROM testprod-440615.euro.test
 GROUP BY 1
@@ -84,7 +84,7 @@ SELECT
 FROM testprod-440615.euro.test
 GROUP BY period
 ORDER BY avg_points DESC;
-----12. Rank performers within each year
+---12. Rank performers within each year
 SELECT
     year,
     performer,
