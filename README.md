@@ -29,7 +29,8 @@ The dataset contains information about:
 10. Countries above overall average
 11. Before vs After 2000 comparison
 12. Performer rankings by year
-
+13. How did each country's points change compared to their previous appearance?
+14. For each performance, compare with the next appearance of the same country
 ## Skills Demonstrated
 
 * Aggregations
@@ -39,6 +40,7 @@ The dataset contains information about:
 * CTEs
 * Subqueries
 * Ranking Functions
+* LAG/LEAD
 
 ## Files
 
