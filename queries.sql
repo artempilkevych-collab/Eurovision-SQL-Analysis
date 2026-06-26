@@ -15,7 +15,7 @@ FROM testprod-440615.euro.test
 GROUP BY 1
 ORDER BY 2 DESC
 ---4. Which countries appeared in Eurovision the most times?
-Select country, COUNT(*) AS participation_count
+SELECT country, COUNT(*) AS participation_count
 FROM testprod-440615.euro.test
 GROUP BY 1
 ORDER BY 2 DESC
