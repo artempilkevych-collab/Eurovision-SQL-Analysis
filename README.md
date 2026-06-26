@@ -31,6 +31,7 @@ The dataset contains information about:
 12. Performer rankings by year
 13. How did each country's points change compared to their previous appearance?
 14. For each performance, compare with the next appearance of the same country
+    
 ## Skills Demonstrated
 
 * Aggregations
@@ -42,6 +43,13 @@ The dataset contains information about:
 * Ranking Functions
 * LAG/LEAD
 
+## Key Findings
+
+* Points inflation is real: average score grew from ~10 (1950s) to ~180 (2020s)
+* Ukraine finished in Top 5 eight times despite competing since 2003
+* Salvador Sobral (Portugal, 2017) holds the all-time record with 758 points
+* Western European "Big 5" dominate participation count but not average points
+  
 ## Files
 
 * queries.sql
