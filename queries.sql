@@ -20,7 +20,7 @@ FROM testprod-440615.euro.test
 GROUP BY 1
 ORDER BY 2 DESC
 ---5. Which years had the highest average Eurovision points?
-SELECT year, AVG(points) AS avf_points
+SELECT year, AVG(points) AS avg_points
 FROM testprod-440615.euro.test
 GROUP BY 1
 Order by 2 DESC
