@@ -93,3 +93,27 @@ SELECT
     RANK() OVER(PARTITION BY year ORDER BY points DESC) AS ranking
 FROM testprod-440615.euro.test
 ORDER BY year, ranking;
+--- 13. How did each country's points change compared to their previous appearance?
+SELECT
+  country,
+  year,
+  points,
+  LAG(points) OVER (PARTITION BY country ORDER BY year) AS prev_year_points,
+  points - LAG(points) OVER (PARTITION BY country ORDER BY year) AS points_change
+FROM testprod-440615.euro.test
+ORDER BY country, year;
+--- 14. For each performance, compare with the next appearance of the same country
+SELECT
+  country,
+  year,
+  points,
+  LEAD(year) OVER (PARTITION BY country ORDER BY year) AS next_year,
+  LEAD(points) OVER (PARTITION BY country ORDER BY year) AS next_points,
+  CASE
+    WHEN LEAD(points) OVER (PARTITION BY country ORDER BY year) > points THEN 'Improved'
+    WHEN LEAD(points) OVER (PARTITION BY country ORDER BY year) < points THEN 'Declined'
+    WHEN LEAD(points) OVER (PARTITION BY country ORDER BY year) = points THEN 'Same'
+    ELSE 'Last appearance'
+  END AS trend
+FROM testprod-440615.euro.test
+ORDER BY country, year;
